@@ -16,7 +16,7 @@ class ScopeshipInlineFormset(BaseInlineFormSet):
             raise ValidationError('Выберите основной раздел статьи')
         if counter_topics > 1:
             raise ValidationError('Основным может быть только один раздел')
-        return super().clean()  # вызываем базовый код переопределяемого метода
+        return super().clean()
 
 
 class ScopeshipInline(admin.TabularInline):
